@@ -51,9 +51,8 @@ maxCollatz x = maxCollatz_r x [0,0]
 main = do
   args <- getArgs
   let num = read(head args)::Int
---  print(runCollatz num)
+  print(runCollatz num)
 --  print(maxCollatz [[1,5],[3,9],[8,7],[10,11],[23,2]])
---  print(lengthCollatz 7)
---  print(buildLengthTable 7)
-  print(buildLengthTable num)
-  print(maxCollatz (buildLengthTable num))
+  print(lengthCollatz num)
+--  print(buildLengthTable num)
+--  print(maxCollatz (buildLengthTable num))
