@@ -1,3 +1,3 @@
 Some excersices in Haskell.
 
-Stuff like prime tiwns and finite simple groups.
+Stuff like ackermann function, prime tiwns, chinese rest class  and finite simple groups.
