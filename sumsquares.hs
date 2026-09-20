@@ -19,6 +19,7 @@ sumSquares x = (x * (x + 1) * (2*x + 1)) `div` 6
 checkSqrt :: Int -> Bool
 checkSqrt x = isInt(sqrt (fromIntegral (sumSquares x)))
 
+{-
 findSquares :: Int -> Int -> [(Int,Int)] -> [(Int,Int)]
 findSquares x max r
   | x > max = r
@@ -28,6 +29,10 @@ findSquares x max r
     buildSquarelist x r
       | checkSqrt x = r ++ [(x, round (sqrt (fromIntegral (sumSquares x))))]
       | otherwise = r
+-}
 
+findSquares :: Int -> [(Int,Int)]
+findSquares maxN = [ (n, round (sqrt (fromIntegral (sumSquares n))))
+                        | n <- [2..maxN], checkSqrt n ]
 main = do
-  print(findSquares 2 1000 [])
+  print(findSquares 1000)
